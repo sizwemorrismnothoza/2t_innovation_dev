@@ -28,7 +28,7 @@ export default function Signup() {
             setError('')
             setIsLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
-            navigate('/')
+            navigate('/form')
 
         }catch(err){
             setError('Failed to create account')
@@ -66,7 +66,7 @@ export default function Signup() {
             </Card.Body>
         </Card>
         <div className='w-100 text-center mt-2'>
-            Already have an accounct? <Link to={'/login'}>Log in</Link>
+            Already have an accounct? <Link to={'/'}>Log in</Link>
         </div>
     </>
   )

@@ -6,7 +6,7 @@ import Login from './Login'
 import { AuthProvider } from "../contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdminDashboard from './AdminDashboard';
-import PrivateRoute from './PrivateRoute';
+
 
 
 function App() {
@@ -19,15 +19,14 @@ function App() {
         <div className="w-100">
           
         <Router>
-          
             <Routes>
-                <Route path="/" element={
-                  <PrivateRoute>
-                    <Dashboard /> 
-                  </PrivateRoute>
-                  } />
+                {/* <Route path="/" element={<Dashboard /> } /> */}
+                <Route path="/" element={<Login />}  />
+              {/* <Route path="/login" element={<Login />} /> */}
+                <Route path='/form' element={<Dashboard />} />
+
                 <Route path="/signup" element= { <Signup /> } />
-                <Route path="/login" element={<Login />} />
+
                 <Route path='/adminDash' element={ <AdminDashboard /> }/>
             </Routes>
           

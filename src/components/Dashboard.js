@@ -207,7 +207,7 @@ export default function Dashboard() {
 
         try{
            await signout();
-           navigate('/login')
+           navigate('/')
         }catch{
             setError("Unable to log out")
         }
